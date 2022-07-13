@@ -7,4 +7,10 @@ router.get('/', (req,res) => {
 
 
 
+
+router.get('/cuadros', (req,res) => {
+    res.render ("./cuadros/cuadros.hbs")  
+} )
+
+
 module.exports = router

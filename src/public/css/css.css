@@ -14,3 +14,10 @@ body {
   
   li {list-style: none;}
   a {text-decoration: none; margin: 5px;}
+
+  #fondo {
+    opacity: 0.1;
+  }
+
+  nav {background-color: black; height: 50px;}
+ 
