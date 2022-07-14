@@ -1,15 +1,16 @@
 const express = require ('express')
 const router = express.Router ()
 
-router.get('/', (req,res) => {
+router.get('/index', (req,res) => {
     res.render ("index.hbs")  
 } )
 
+router.get('/acercade', (req,res) => {
+    res.render ("./acercade.hbs")  
+} )
 
-
-
-router.get('/cuadros', (req,res) => {
-    res.render ("./cuadros/cuadros.hbs")  
+router.get('/servicios', (req,res) => {
+    res.render ("./servicios.hbs")  
 } )
 
 

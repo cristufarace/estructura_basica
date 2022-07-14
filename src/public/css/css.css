@@ -1,3 +1,40 @@
+#header {
+  padding-top: 10px;
+  text-align: left;
+  background: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 50%;  
+}
+
+ul, li {
+  list-style: none;
+}
+.nav li a {
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+
+}
+
+.nav li a:hover {
+  background-color: gray;
+}
+.nav > li {
+  float: left;
+}
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px
+}
+.nav li:hover > ul {
+display: block;
+}
+
 body {
     background: #8360c3; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -11,13 +48,8 @@ body {
       #8360c3
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  
-  li {list-style: none;}
-  a {text-decoration: none; margin: 5px;}
 
-  #fondo {
-    opacity: 0.1;
-  }
 
-  nav {background-color: black; height: 50px;}
+
+
  

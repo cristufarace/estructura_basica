@@ -38,8 +38,10 @@ app.set("view engine", ".hbs"); //con esta linea hago uso de lo que configure ar
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 // routes
 app.use(require ("./routes/index"))
-app.use(require ("./routes/users"))
-app.use(require ("./routes/apiComments"))
+app.use(require ("./routes/childrenRoutes"))
+app.use(require ("./routes/manRoutes"))
+app.use(require ("./routes/womenRoutes"))
+
 
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 // static FileS
