@@ -16,6 +16,8 @@ require ('./database')
 
 
 
+
+
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 // settings
 app.set("views", path.join(__dirname, "views")); //le digo a expres donde encontrar la carpeta vistas
@@ -51,3 +53,4 @@ app.use(express.static(path.join(__dirname, 'public')))
 // server is listening
 app.listen (3000, ()=> console.log("Servidor corriendo en el puerto",3000))
 
+// mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
