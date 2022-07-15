@@ -1,10 +1,9 @@
 /* mmmmmmmmmmmmmmmmm estilos generales mmmmmmmmmmmmmmmmmmmmmmm */
-* {font-family: "Poppins", sans-serif;}
-body {background: #d9d6df; /* fallback for old browsers */background: -webkit-linear-gradient(to right,#dff3ed,#d9cdf0); /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to right,#2ebf91,#8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
-a { text-decoration: none; color: white;}
-ul, li {list-style: none;}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+QLD+Beginner&family=Hanalei+Fill&family=Poppins:wght@500&family=Ubuntu:wght@300&display=swap');
+*{font-family: 'Edu QLD Beginner', cursive; font-size: 20px;}
+ul, li {list-style: none}
+main{position: relative; top: 60px;} 
+footer {position: relative; top: 60px;} 
 
 /* mmmmmmmmmmmmmmm  index mmmmmmmmmmmmmmmmmmmmmm */
 #headerIndex {width: 100%;height: 100%;background-image: url(/img/banner.jpg);background-repeat: no-repeat;background-size: cover;display: flex;align-items: center;justify-content: center;text-align: center;}
@@ -15,19 +14,20 @@ ul, li {list-style: none;}
 /* mmmmmmmmmmmmmmm  footer mmmmmmmmmmmmmmmmmmmmmm */
 footer{ display: flex; background: black;}
 iframe {padding: 20px;}
-#footerUls {padding: 20px; display: flex; justify-content:space-between; width: 50%; align-items: center;}
-footer ul a  {color: white; text-decoration: none;display: block; }
-footer li a:hover { color: white; background-color: gray; font-weight: bold;}
+#footerUls {padding: 20px; display: flex; justify-content: space-evenly; }
+footer ul a  {color: white; text-decoration: none;}
+footer li a:hover { color: white;  font-weight: bold; color: pink;}
 
 /* mmmmmmmmmmmmmmm  navegacion mmmmmmmmmmmmmmmmmmmmmm */
-#headerNavegacion {padding: 10px;text-align: left;background: black;height: 50px;display: flex;justify-content: space-between;line-height: 50%; }
-.nav li a:hover {background-color: gray; font-weight: bold;}
+#headerNavegacion {padding: 10px;text-align: left;background: black;height: 50px;display: flex;justify-content: space-evenly;line-height: 50%; }
+.nav li a:hover { font-weight: bold; color: pink; }
 .nav > li {float: left; }
 #busquedalabel {color: white}
 .nav li ul {display: none;position: absolute;min-width: 140px; }
 .nav li:hover > ul {display: block; }
 .nav li a  {background: black;color: white;text-decoration: none;padding: 10px 15px;display: block; }
 label:hover {font-weight: bold;}
+nav {text-align: center; position: fixed; width: 100%; z-index: 1;}
 
 /* 
 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm productos mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */

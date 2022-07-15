@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const fetchData = async () => {
+    
     try {
         const res = await fetch('/js/api.json')
         const data = await res.json()
@@ -91,7 +92,7 @@ const pintarFooter = () => {
 
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        <th scope="row" colspan="5">Carrito vacío. Comience a comprar</th>
         `
         return
     }
