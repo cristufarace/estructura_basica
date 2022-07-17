@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+QLD+Beginner&family=Hanalei+Fill&family=Poppins:wght@500&family=Ubuntu:wght@300&display=swap');
 *{font-family: 'Edu QLD Beginner', cursive; font-size: 20px;}
 ul, li {list-style: none}
-main{position: relative; top: 60px;} 
-footer {position: relative; top: 60px;} 
+main{position: relative; top: 50px;} 
+footer {position: relative; top: 50px;} 
 
 /* mmmmmmmmmmmmmmm  index mmmmmmmmmmmmmmmmmmmmmm */
-#headerIndex {width: 100%;height: 100%;background-image: url(/img/banner.jpg);background-repeat: no-repeat;background-size: cover;display: flex;align-items: center;justify-content: center;text-align: center;}
+#headerIndex {width: 100%;height: 100%;background-image: url(/img/banner.jpg);background-repeat: no-repeat;background-size: cover;display: flex;align-items: center;justify-content: center;text-align: center; background-attachment:fixed ;}
 #headerIndex div {width: 50%;background-color: rgba(255, 255, 255, 0.5);}
 #headerIndex h1 {font-family: "Poppins", sans-serif;font-weight: 300;font-size: 2em;}
 #headerIndex h1 span {display: block;color: #b45008;font-family: miFuente;font-size: 3rem;}
+ 
 
 /* mmmmmmmmmmmmmmm  footer mmmmmmmmmmmmmmmmmmmmmm */
 footer{ display: flex; background: black;}
