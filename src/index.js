@@ -43,6 +43,7 @@ app.use(require ("./routes/index"))
 app.use(require ("./routes/childrenRoutes"))
 app.use(require ("./routes/manRoutes"))
 app.use(require ("./routes/womenRoutes"))
+app.use(require ("./routes/totalCarrito"))
 
 
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm

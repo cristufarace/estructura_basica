@@ -1,6 +1,11 @@
 console.log ('Me estoy ejecutando')
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+        
+    }
 })
 
 const fetchData = async () => {
@@ -82,7 +87,7 @@ const pintarCarrito = () => {
 
     pintarFooter()
     accionBotones()
-
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
 const footer = document.querySelector('#footer-carrito')
@@ -151,6 +156,11 @@ const accionBotones = () => {
             pintarCarrito()
         })
     })
+}
+
+if (pintarFooter.length > 0 ){
+    const pagar = document.getElementById ('pagar')
+    pagar.style.backgroundColor = "blue"
 }
 
 // let carritoEjemplo = {}
