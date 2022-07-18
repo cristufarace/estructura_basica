@@ -5,8 +5,8 @@ ul, li {list-style: none}
 main{position: relative; top: 50px;} 
 footer {position: relative; top: 50px;} 
 
-/* mmmmmmmmmmmmmmm  index mmmmmmmmmmmmmmmmmmmmmm */
-#headerIndex {width: 100%;height: 100%;background-image: url(/img/banner.jpg);background-repeat: no-repeat;background-size: cover;display: flex;align-items: center;justify-content: center;text-align: center; background-attachment:fixed ;}
+/* mmmmmmmmmmmmmmm  index e ir a pagar mmmmmmmmmmmmmmmmmmmmmm */
+#headerIndex,#ir-a-pagar {width: 100%;height: 100%;background-image: url(/img/banner.jpg);background-repeat: no-repeat;background-size: cover;display: flex;align-items: center;justify-content: center;text-align: center; background-attachment:fixed ;}
 #headerIndex div {width: 50%;background-color: rgba(255, 255, 255, 0.5);}
 #headerIndex h1 {font-family: "Poppins", sans-serif;font-weight: 300;font-size: 2em;}
 #headerIndex h1 span {display: block;color: #b45008;font-family: miFuente;font-size: 3rem;}
@@ -35,15 +35,16 @@ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm productos mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 .product-card{
     width:90%;
     margin:50px auto;
-    background:#ffffff;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+    
   }
   
+ 
   .product-card .img-product{
     position:relative;
-    margin:0px;
+    margin:0px;;
   }
-  .product-card .img-product img{width:100%;}
+  .product-card .img-product img{width:100%; }
   .product-card .img-product .whishlist{
     position:absolute;
     bottom:20px;

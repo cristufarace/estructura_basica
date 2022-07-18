@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
+
 const fetchData = async () => {
     
     try {
         const res = await fetch('/js/api.json')
         const data = await res.json()
         // console.log(data)
-        pintarProductos(data)
-        detectarBotones(data)
+        pintarProductos(data) //esta linea me permite pasar los datos obtenidos mediante fetch a la funcion
+        detectarBotones(data)//esta linea me permite pasar los datos obtenidos mediante fetch a la funcion
     } catch (error) {
         console.log(error)
     }
@@ -38,19 +39,32 @@ const pintarProductos = (data) => {
     contendorProductos.appendChild(fragment)
 }
 
+
+
+// (1) una vez cargada la pagina se hace un fetch pidiendo todos los productos
+// (2) luego se le pregutna al localStorage si tiene algo en el carrito  y en caso afirmativo que lo pinte
+// (3) la funcion pintar productos ============> lo que hace es que por cada producto que llega de la peticion fetch forma una tarjeta, cada tarjeta se va insetando al fragment y una vez creadas todas las tarjetas, le inserto al DOM el fragment
+// (4) En el paso anteriror al boton agregar de cada producto se le vincula el id del producto mediante el atributo data
+// (5) con la funcion detectar botones ============> recorro cada boton, a cada boton se le agrega una escucha de evento evento, (con un add event listener, no se usa onclic pq es viejo eso) por lo que, cada vez que se le haga clic a un boton comprar,voy a empujar ese producto al carrito de compras. ¿Como funciona el carrito?
+
+//El carrito es un objeto que COLECCIONA DATOS ORDENADOS POR UN VALOR DE INDICE. Ej 1:{id:1, titulo:'cafe', precio:500, cantidad: 1}. Por cada clic que se haga en comprar, se agrega un indice con un objeto que dentro tiene las propiedaes de esa tarjeta. Si en el carrito hay 2 productos iguales la popiedad cantidad aumenta en 1. Otra forma de hacerlo es almacenarlo en un array, pero aca uso un objeto. Al usar un objeto me permite crear el inidice que mencionaba antes. El beneficio de trabajar con objetos es que no tengo que recorrer todo el carrito para manipular los botones de accion del carrito ( boton + y boton -) , porque puedo acceder a cada indicie en particular y cada vez que se agregue desde el carrito un producto o vuelva a apretar compar en ese producto desde la tarjeta, lo que hace el programa es modificar netamente el objeto en cuestion accediendo a travez del indice. AUnque igualmente lo puedo hace con array y agregarle un indicie. Para poder pintar el contenido del carrito tengo 2 opciones 1 es usar el for in (for const key in carrito) hace tal cosa o sino con Object.Values con un forEach (lo que hace object values es transformar el objeto en un array)
+
+
 let carrito = {}
-
 const detectarBotones = (data) => {
+    // selecciono cada boton que hayan dentro de cada card
     const botones = document.querySelectorAll('.card button')
-
+    
     botones.forEach(btn => {
         btn.addEventListener('click', () => {
             // console.log(btn.dataset.id)
-            const producto = data.find(item => item.id === parseInt(btn.dataset.id))
+            const producto = data.find( item  => item.id === parseInt(btn.dataset.id) )
             producto.cantidad = 1
+//si ya existe en carrito... aumento su cantidad
             if (carrito.hasOwnProperty(producto.id)) {
                 producto.cantidad = carrito[producto.id].cantidad + 1
             }
+//si no existe en carrito... lo agrego al mismo con los  tre puntos ...producto hago una copia del mismo. Se llama spread
             carrito[producto.id] = { ...producto }
             // console.log('carrito', carrito)
             pintarCarrito()
@@ -158,10 +172,7 @@ const accionBotones = () => {
     })
 }
 
-if (pintarFooter.length > 0 ){
-    const pagar = document.getElementById ('pagar')
-    pagar.style.backgroundColor = "blue"
-}
+
 
 // let carritoEjemplo = {}
 // carritoEjemplo = {
